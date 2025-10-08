@@ -2,29 +2,54 @@ package main.java;
 import java.util.Scanner;
 
 public class App {
-        //Comentário
-
-    public static void funcao_teste (){
-        //Biblioteca para entrada de dados
-        Scanner ler = new Scanner(System.in); 
-
-        //variável local a
-        String v2;
-        int v1;
-
-        System.out.println("Comando de Saida de Dados");
-        
-        System.out.printf("Informe uma palavra: ");
-        v2 = ler.next();
-
-        System.out.printf("Informe um número: ");
-        v1 = ler.nextInt();
-
-        System.out.printf(v2+" "+v1);
-    }
     public static void main(String[] args) throws Exception {
-        funcao_teste();
+        double massa, volume, densidade, altura;
+        
+        //Biblioteca para entrada de dados
+        Scanner ler = new Scanner(System.in);
+
+        System.out.println("=== CRIAÇÃO DO OBJETO CORPO HUMANO ===");
+
+        System.out.println("Digite a massa inicial (kg):");
+        massa = ler.nextDouble();
+
+        System.out.println("Digite o volume inicial (m³):");
+        volume = ler.nextDouble();
+
+        System.out.println("Digite a densidade inicial (kg/m³):");
+        densidade = ler.nextDouble();
+
+        System.out.println("Digite a altura inicial (m):");
+        altura = ler.nextDouble();
+
+        
+        CorpoHumano c1 = new CorpoHumano(massa, volume, densidade, altura);
+        System.out.println("=== VALORES INICIAIS ===");
+        System.out.printf("Massa: %.2f kg /n", c1.getMassa());
+        
+        System.out.printf("Volume: %.2f m³ /n", c1.getVolume());
+        System.out.printf("Densidade: %.2f kg/m³ /n", c1.getDensidade());
+        System.out.printf("Altura: %.2f m /n", c1.getAltura());
+        
+        System.out.println("IMC:" + c1.imc());
 
 
+        System.out.println("Digite uma nova massa (kg):");
+        massa = ler.nextDouble();
+        c1.setMassa(massa);
+
+        System.out.println("Digite uma nova altura (m):");
+        altura = ler.nextDouble();
+        c1.setAltura(altura);
+
+        System.out.println("Novos valores: ");
+
+        System.out.printf("Massa: %.2f kg /n", c1.getMassa());
+        System.out.printf("Altura: %.1f m /n", c1.getAltura());
+
+        System.out.println("Novo IMC: " + c1.imc());
+
+        
+        ler.close();
     }
 }
