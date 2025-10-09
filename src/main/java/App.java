@@ -31,7 +31,7 @@ public class App {
         System.out.printf("Densidade: %.2f kg/m³ /n", c1.getDensidade());
         System.out.printf("Altura: %.2f m /n", c1.getAltura());
         
-        System.out.println("IMC:" + c1.imc());
+        System.out.println("IMC:" + c1.calcularIMC());
 
 
         System.out.println("Digite uma nova massa (kg):");
@@ -47,7 +47,7 @@ public class App {
         System.out.printf("Massa: %.2f kg /n", c1.getMassa());
         System.out.printf("Altura: %.1f m /n", c1.getAltura());
 
-        System.out.println("Novo IMC: " + c1.imc());
+        System.out.println("Novo IMC: " + c1.calcularIMC());
 
         
         ler.close();
