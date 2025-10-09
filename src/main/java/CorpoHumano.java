@@ -12,7 +12,7 @@ public class CorpoHumano {
         this.densidade = densidade;
     }
 
-    public double imc(){
+    public double calcularIMC(){
         double imc = massa/(altura*altura);
         return imc;
     }
