@@ -62,3 +62,30 @@
 ## Feedback 📨
 -  Sua atividade receberá uma pontuação de 0 a 10, que compõe a Nota de Atividades da ATV1;
 -  A nota será atribuída no Microsoft Teams
+
+## resposta para as perguntas
+1) Na classe Corpo_Humano inclua a linha c1.massa = "2"; logo depois de instanciar o objeto c1. 
+
+A) Qual foi a ocorrência? 
+Ocorreu um erro por tentar alterar diretamente um atributo privado. 
+
+B) Qual a conclusão sobre o que aconteceu? 
+Não é possível alterar um atributo privado fora da classe. 
+
+
+2) Na classe Corpo_Humano altere a linha private float Massa para public float Massa; 
+
+A) Qual foi a ocorrência? 
+Nesse caso seria possível alterar o atributo “massa”, porém como ele é do tipo float, não é possível receber uma String com o comando “ c1.massa = “2” “, mas seria possível se removesse as aspas do 2. 
+
+B) Qual a conclusão sobre o que aconteceu? 
+Não tem como atribuir um dado que não seja do tipo de dado que uma variavel esta preparada para receber em java. 
+
+
+3) Na classe Corpo_Humano altere a linha public setVolume(float volume) para private setVolume(float volume) 
+
+A) Qual foi a ocorrência? 
+Ao alterá-la para privada não é mais possível acessar o método fora da classe. 
+
+B) Qual a conclusão sobre o que aconteceu? 
+Métodos privados apenas são acessíveis dentro da classe, e como tanto o método setter como o atributo são privados, só possível atribuir o valor na criação do objeto, utilizando o construtor.  
